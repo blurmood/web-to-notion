@@ -1,0 +1,24 @@
+name = "web-to-notion"
+main = "src/index.ts"
+compatibility_date = "2023-10-30"
+
+# Variables for both local development and production
+[vars]
+TG_IMAGE_HOST = "tg-image.oox-20b.workers.dev"
+NOTION_DATABASE_ID = "2223eb3c2d55808d9b51e8a4d4f054b2"
+
+# Sensitive data is now stored as Cloudflare Workers Secrets
+# NOTION_TOKEN and GEMINI_API_KEY are set via: wrangler secret put
+
+# ----------------------------------------------------------------
+# Secrets for production environment.
+# These should be set using the wrangler CLI and not stored here.
+#
+# To set them, run the following commands in your terminal:
+#
+# wrangler secret put NOTION_TOKEN
+# --> You will be prompted to enter the Notion token.
+#
+# wrangler secret put GEMINI_API_KEY
+# --> You will be prompted to enter your Google AI (Gemini) API key.
+# ----------------------------------------------------------------
